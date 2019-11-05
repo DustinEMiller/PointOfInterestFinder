@@ -28,8 +28,8 @@ class Form extends Component {
     render() {
         return(
             <Auxillary>
-                <Input />
-                <Select />
+                <Input label={"ZIP Code"}/>
+                <Select label={"Radius"}/>
                 <button>Make name a prop</button>
             </Auxillary>
         )

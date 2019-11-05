@@ -16,10 +16,10 @@ class Input extends React.Component {
 
     render() {
         return (
-            <Auxillary>
-                <label>ZIP Code</label>
+            <div>
+                <label>{props.label}</label>
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
-            </Auxillary>
+            </div>
         );
     }
 }
