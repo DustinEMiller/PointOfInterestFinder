@@ -1,4 +1,5 @@
-import React, {Comnponent} from "react";
+import React, {Component} from "react";
+import Auxillary from '../../hoc/Auxillary/Auxillary';
 
 class PointOfInterest extends Component {
     render() {
