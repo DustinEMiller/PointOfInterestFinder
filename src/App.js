@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PointOfInterest from '../PointOfInterest/PointOfInterest'
+import PointOfInterest from './containers/PointOfInterest/PointOfInterest'
 
 function App() {
   return (

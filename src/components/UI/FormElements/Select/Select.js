@@ -1,32 +1,26 @@
-import React, {Component} from "react";
-import Auxillary from '../../hoc/Auxillary/Auxillary';
+import React from "react";
 
-class Select extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: '25'};
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    render() {
-        return (
-            <Auxillary>
-                <label>Radius</label>
-                <select value={this.state.value} onChange={this.handleChange}>
-                    <option value="10">10</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                </select>
-            </Auxillary>
-
-        )
-    }
+const Select = (props) => {
+    return(
+        <div className="form-group">
+            <label htmlFor={props.name}> {props.title} </label>
+            <select
+                name={props.name}
+                value={props.value}
+                onChange={props.handleInput}
+            >
+                <option value="" disabled>{props.placeholder}</option>
+                {props.options.map(option => {
+                    return (
+                        <option
+                            key={option}
+                            value={option}
+                            label={option}>{option}
+                        </option>
+                    );
+                })}
+            </select>
+        </div>)
 }
 
 export default Select;

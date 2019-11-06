@@ -1,25 +1,20 @@
-import React, {Component} from "react";
-import Auxillary from '../../hoc/Auxillary/Auxillary';
+import React from "react";
 
-class Input extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
+const Input = (props) => {
+    return (
+        <div className="form-group">
+            <label htmlFor={props.name} className="form-label">{props.title}</label>
+            <input
+                className="form-input"
+                id={props.name}
+                name={props.name}
+                type={props.type}
+                value={props.value}
+                onChange={props.handleInput}
+                placeholder={props.placeholder}
+            />
+        </div>
+    )
+};
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    render() {
-        return (
-            <div>
-                <label>{props.label}</label>
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
-            </div>
-        );
-    }
-}
+export default Input;
